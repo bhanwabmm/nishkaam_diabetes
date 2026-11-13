@@ -1,0 +1,42 @@
+/* Floating WhatsApp Button — appears bottom-right on every page */
+.wa-float-btn{
+	position:fixed !important;
+	right:24px;
+	bottom:24px;
+	width:60px;
+	height:60px;
+	background:#25D366;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	box-shadow:0 10px 25px -6px rgba(0,0,0,0.45);
+	z-index:999;
+	text-decoration:none;
+	animation:wa-float-pulse 2.2s infinite;
+}
+.wa-float-btn i{
+	color:#fff;
+	font-size:30px;
+	line-height:1;
+}
+.wa-float-btn:hover{
+	background:#1ebe57;
+	transform:scale(1.06);
+}
+@keyframes wa-float-pulse{
+	0%{ box-shadow:0 10px 25px -6px rgba(0,0,0,0.45), 0 0 0 0 rgba(37,211,102,0.55); }
+	70%{ box-shadow:0 10px 25px -6px rgba(0,0,0,0.45), 0 0 0 14px rgba(37,211,102,0); }
+	100%{ box-shadow:0 10px 25px -6px rgba(0,0,0,0.45), 0 0 0 0 rgba(37,211,102,0); }
+}
+@media (max-width:576px){
+	.wa-float-btn{
+		right:16px;
+		bottom:16px;
+		width:52px;
+		height:52px;
+	}
+	.wa-float-btn i{
+		font-size:26px;
+	}
+}
